@@ -15,6 +15,10 @@ import { Calendar, ArrowLeftCircle } from 'react-feather';
 
 import { getArticleDetails, getArticlesSlug } from '../../lib/gql-data';
 
+import { components } from '../../components/mdx-components';
+
+import { readingTime } from '../../lib/readTime';
+
 export default function ArticleDetail({ item, body }) {
   let strDate = `${item.date}`;
 
@@ -23,18 +27,14 @@ export default function ArticleDetail({ item, body }) {
       <Head>
         <title>{item.title}</title>
       </Head>
-      <Container
-        maxW={{ base: 'container.xl', md: 'container.lg' }}
-        pt={16}
-        pb={10}
-      >
+      <Container maxW={'container.xl'} pt={16} pb={10}>
         <Box
           bg={'gray.50'}
           border={'1px solid'}
           borderColor={'gray.100'}
           borderRadius={'md'}
           mt={5}
-          p={{ base: 2, md: 3, xl: 5 }}
+          p={{ base: 2, md: 4, xl: 8 }}
         >
           <Button
             color={'gray.600'}
@@ -56,7 +56,7 @@ export default function ArticleDetail({ item, body }) {
           </Box>
           <Box color={'gray.900'}>
             <Text
-              fontSize={{ base: 'xl', md: '2xl', lg: '3xl' }}
+              fontSize={{ base: 'xl', md: '2xl', lg: '4xl' }}
               fontWeight={900}
             >
               {item.title}
@@ -84,8 +84,8 @@ export default function ArticleDetail({ item, body }) {
               </Flex>
             </Flex>
           </Box>
-          <Box color={'gray.900'}>
-            <MDXRemote {...body} lazy={true} />
+          <Box color={'gray.900'} mt={10}>
+            <MDXRemote {...body} components={components} lazy={true} />
           </Box>
         </Box>
       </Container>

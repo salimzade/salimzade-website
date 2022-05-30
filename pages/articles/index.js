@@ -13,7 +13,7 @@ export default function Articles({ items }) {
         <title>Статьи</title>
       </Head>
       <Container
-        maxW={{ base: 'container.xl', md: 'container.lg' }}
+        maxW={'container.xl'}
         pt={10}
         pb={10}
       >
