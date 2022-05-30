@@ -49,7 +49,7 @@ export default function Navbar() {
       w={'100%'}
       zIndex={'2'}
     >
-      <Container maxW={{ base: 'container.xl', md: 'container.lg'}}>
+      <Container maxW={'container.xl'}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <HStack alignItems={'center'}>
               <Image src={colorMode === 'light' ? '/logo-light.svg' : '/logo-dark.svg'} alt='logo' w={'128px'} h={'64px'} />

@@ -13,7 +13,7 @@ export default function ErrorPage() {
       <Head>
         <title>Страница не найдена</title>
       </Head>
-      <Container maxW={'container.lg'} pt={16} pb={16}>
+      <Container maxW={'container.xl'} pt={16} pb={16}>
         <Flex
           flexDirection={'column'}
           alignItems={'center'}

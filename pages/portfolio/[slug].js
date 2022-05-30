@@ -5,6 +5,8 @@ import { MDXRemote } from 'next-mdx-remote';
 import { getPortfolioItemDetail, getPortfolioSlug } from '../../lib/gql-data';
 import { Box, Container, Image, Text } from '@chakra-ui/react';
 
+import { components } from '../../components/mdx-components';
+
 export default function ProjectDetails({ item, body }) {
   return (
     <>
@@ -12,7 +14,7 @@ export default function ProjectDetails({ item, body }) {
         <title>{item.title}</title>
       </Head>
       <Container
-        maxW={{ base: 'container.xl', md: 'container.lg' }}
+        maxW={'container.xl'}
         pt={16}
         pb={10}
       >
@@ -44,8 +46,8 @@ export default function ProjectDetails({ item, body }) {
               {item.description}
             </Text>
           </Box>
-          <Box color={'gray.900'} className="content">
-            <MDXRemote {...body} lazy={true} />
+          <Box color={'gray.900'}>
+            <MDXRemote {...body} components={components} lazy={true} />
           </Box>
         </Box>
       </Container>
