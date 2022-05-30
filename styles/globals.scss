@@ -13,33 +13,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-.content {
-  ul {
-    margin: 0 0 1rem 1rem;
-  }
-  pre {
-    width: 100% !important;
-    border-radius: 5px;
-    background-color: #011627;
-    inline-size: min-content;
-    color: #F7FAFC;
-    padding: 1rem;
-    margin: 1rem 0 1rem 0;
-    overflow: hidden;
-    code {
-      font-size: 14px;
-      font-family: 'Roboto Mono', monospace;
-    }
-  }
-  p {
-    font-size: 16px;
-    margin-bottom: 1rem;
-    code {
-      border-radius: 5px;
-      background-color: #011627;
-      color: #F7FAFC;
-      padding: 0.5rem;
-    }
-  }
-}
