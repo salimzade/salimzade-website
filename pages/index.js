@@ -15,7 +15,7 @@ export default function Home({ items }) {
         <title>Проекты | Портфолио</title>
       </Head>
       <Container
-        maxW={{ base: 'container.xl', md: 'container.lg' }}
+        maxW={'container.xl'}
         pt={10}
         pb={10}
       >
