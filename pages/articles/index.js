@@ -1,18 +1,16 @@
-import Link from 'next/link';
 import Head from 'next/head';
-
+import Link from 'next/link';
 import { Box, Container, Grid } from '@chakra-ui/react';
+import Card from '../../components/card';
+import Heading from '../../components/heading';
 
-import Card from '../components/card';
-import Heading from '../components/heading';
+import { getArticlesList } from '../../lib/gql-data';
 
-import { getPortfolioItemsList } from '../lib/gql-data';
-
-export default function Home({ items }) {
+export default function Articles({ items }) {
   return (
     <>
       <Head>
-        <title>Проекты | Портфолио</title>
+        <title>Статьи</title>
       </Head>
       <Container
         maxW={{ base: 'container.xl', md: 'container.lg' }}
@@ -21,8 +19,8 @@ export default function Home({ items }) {
       >
         <Box mt={20}>
           <Heading
-            title={'Проекты'}
-            subTitle={'взгляните на последние работы и не последние тоже'}
+            title={'Статьи'}
+            subTitle={'о разработке, дизайне и не только'}
           />
         </Box>
         <Grid
@@ -31,8 +29,8 @@ export default function Home({ items }) {
           gap={5}
           mt={16}
         >
-          {items?.map((item) => (
-            <Link href={`/portfolio/${item.slug}`} key={item.slug}>
+          {items.map((item) => (
+            <Link href={`/articles/${item.slug}`} key={item.slug}>
               <a>
                 <Card {...item} />
               </a>
@@ -44,12 +42,11 @@ export default function Home({ items }) {
   );
 }
 
-// SSR
 export const getStaticProps = async () => {
-  const data = await getPortfolioItemsList();
+  const data = await getArticlesList();
   return {
     props: {
-      items: data.portfolios,
+      items: data.articles,
     },
   };
 };
