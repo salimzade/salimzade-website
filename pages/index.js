@@ -9,6 +9,7 @@ import Heading from '../components/heading';
 import { getPortfolioItemsList } from '../lib/gql-data';
 
 export default function Home({ items }) {
+  console.log(items)
   return (
     <>
       <Head>
