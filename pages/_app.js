@@ -14,13 +14,14 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="персональный вебсайт про ui/ux и веб-дизайн портфолио и блог"
+          content="personal portfolio and blog about ux/ui design abd web development"
         />
         <meta name="author" content="Teymur Salimzade" />
         <meta name="author" content="salimzade" />
         <meta property="og:site_name" content="Teymur Salimzade" />
         <meta name="og:title" content="Teymur Salimzade" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://salimzade.netlify.app/cover.png" />
       </Head>
       <ChakraProvider>
         <Navbar />
