@@ -10,7 +10,7 @@ export default function Articles({ items }) {
   return (
     <>
       <Head>
-        <title>Статьи</title>
+        <title>Articles</title>
       </Head>
       <Container
         maxW={'container.xl'}
@@ -19,8 +19,8 @@ export default function Articles({ items }) {
       >
         <Box mt={20}>
           <Heading
-            title={'Статьи'}
-            subTitle={'о разработке, дизайне и не только'}
+            title={'Articles'}
+            subTitle={'about dev, design and much more'}
           />
         </Box>
         <Grid

@@ -12,7 +12,7 @@ export default function Home({ items }) {
   return (
     <>
       <Head>
-        <title>Проекты | Портфолио</title>
+        <title>Projects | Portfolio</title>
       </Head>
       <Container
         maxW={'container.xl'}
@@ -21,8 +21,8 @@ export default function Home({ items }) {
       >
         <Box mt={20}>
           <Heading
-            title={'Проекты'}
-            subTitle={'взгляните на последние работы и не последние тоже'}
+            title={'Projects'}
+            subTitle={'Check out my latest works'}
           />
         </Box>
         <Grid

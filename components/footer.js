@@ -15,8 +15,8 @@ import Link from 'next/link';
 import { GitHub, Youtube } from 'react-feather';
 
 const Links = [
-  { id: 1, title: 'Проекты', path: '/' },
-  { id: 2, title: 'Статьи', path: '/articles' },
+  { id: 1, title: 'Projects', path: '/' },
+  { id: 2, title: 'Articles', path: '/articles' },
   { id: 3, title: 'Icons 8', path: 'https://icons8.ru/illustrations' },
 ];
 

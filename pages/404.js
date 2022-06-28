@@ -11,7 +11,7 @@ export default function ErrorPage() {
   return (
     <>
       <Head>
-        <title>Страница не найдена</title>
+        <title>Page not found</title>
       </Head>
       <Container maxW={'container.xl'} pt={16} pb={16}>
         <Flex
@@ -27,7 +27,7 @@ export default function ErrorPage() {
             mt={10}
             color={useColorModeValue('gray.800', 'yellow.300')}
           >
-            О ужас страница не найдена!
+            OMG! Page not found!
           </Text>
         </Flex>
       </Container>
